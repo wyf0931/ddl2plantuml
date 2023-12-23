@@ -1,5 +1,5 @@
 # ddl2plantuml
-MySQL DDL Create SQL convert to PlantUML Class disgram code.
+MySQL DDL Create SQL convert to [PlantUML Class diagram](https://plantuml.com/zh/class-diagram) code.
 
 
 **Technical principle:**

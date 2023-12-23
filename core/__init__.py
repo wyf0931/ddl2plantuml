@@ -5,7 +5,7 @@ from lark import Lark
 from .transformer import DdlSqlTransformer
 from .visitor import translate
 
-with open('core/grammar/ddl_create_sql.lark', 'r', encoding='utf-8') as f:
+with open('../grammar/ddl_create_sql.lark', 'r', encoding='utf-8') as f:
     grammar = f.read()
 
 dsl_parser = Lark(grammar, parser="lalr", transformer=DdlSqlTransformer())

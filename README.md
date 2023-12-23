@@ -1,8 +1,15 @@
 # ddl2plantuml
 DDL Create SQL convert to PlantUML Class disgram code.
 
-## Usage
-
+## Quickstart
+1. clone this repo.
+2. install dependencies: `pip install -r requirements.txt`
+3. Start server:
+    ```shell
+    uvicorn main:app --reload
+    ```
+### Python Code
+Example in `example.py`:
 ```python 
 from core import ddl_to_class
 
@@ -25,3 +32,23 @@ entity user {
     nick_name : text 
 }
 ```
+
+### Use with `curl`
+use `curl` send post request:
+```shell
+curl -X POST "http://127.0.0.1:8000/api/ddl_to_class/" \
+     -H "Content-Type: application/json" \
+     -d '{"ddl_sql": "CREATE TABLE example_table (id INT, name VARCHAR)"}'
+```
+
+response:
+```json
+{
+    "code": 200,
+    "data": "entity example_table { \n    id : INT \n    name : VARCHAR \n}\n",
+    "message": "ok"
+}
+```
+
+## License
+ddl2plantuml is completely free and open-source and licensed under the MIT license.

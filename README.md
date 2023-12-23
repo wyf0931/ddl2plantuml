@@ -1,9 +1,17 @@
 # ddl2plantuml
-DDL Create SQL convert to PlantUML Class disgram code.
+MySQL DDL Create SQL convert to PlantUML Class disgram code.
+
+
+**Technical principle:**
+
+Use [Lark](https://github.com/lark-parser/lark) parse MySQL DDL Create SQL to `dict`, then convert `dict` to PlantUML class code.
 
 ## Quickstart
 1. clone this repo.
-2. install dependencies: `pip install -r requirements.txt`
+2. install dependencies:
+   ```shell
+   pip install -r requirements.txt
+   ```
 3. Start server:
     ```shell
     uvicorn main:app --reload

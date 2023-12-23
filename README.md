@@ -8,7 +8,7 @@ DDL Create SQL convert to PlantUML Class disgram code.
     ```shell
     uvicorn main:app --reload
     ```
-### Python Code
+### Hello World
 Example in `example.py`:
 ```python 
 from core import ddl_to_class

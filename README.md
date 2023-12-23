@@ -4,7 +4,10 @@ MySQL DDL Create SQL convert to [PlantUML Class diagram](https://plantuml.com/zh
 
 **Technical principle:**
 
-Use [Lark](https://github.com/lark-parser/lark) parse MySQL DDL Create SQL to `dict`, then convert `dict` to PlantUML class code.
+- Use [Lark](https://github.com/lark-parser/lark) parse MySQL DDL Create SQL to `dict`, then convert `dict` to PlantUML class code.
+
+- MySQL grammar Reference:
+[MySQLParser](https://github.com/mysql/mysql-workbench/blob/8.0/library/parsers/grammars/MySQLParser.g4)
 
 ## Quickstart
 1. clone this repo.

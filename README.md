@@ -33,7 +33,7 @@ entity user {
 }
 ```
 
-### Use with `curl`
+### HTTP Call
 use `curl` send post request:
 ```shell
 curl -X POST "http://127.0.0.1:8000/api/ddl_to_class/" \
@@ -49,6 +49,13 @@ response:
     "message": "ok"
 }
 ```
+
+## Similar projects
+- [dbsql2puml](https://github.com/deadbok/py-puml-tools/tree/master/)
+
+## Dependencies
+- [lark](https://github.com/lark-parser/lark)
+- [fastapi](https://github.com/tiangolo/fastapi)
 
 ## License
 ddl2plantuml is completely free and open-source and licensed under the MIT license.

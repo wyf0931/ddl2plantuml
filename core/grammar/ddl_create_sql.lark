@@ -1,0 +1,14 @@
+start: table
+table: "create"i "table"i CNAME "(" column* ")" comment?
+column:  CNAME TYPE constraint* comment?
+constraint: (primary_key autoincrement?) | not_null
+primary_key: ("PRIMARY"i "KEY"i ) -> primary_key
+autoincrement: "AUTOINCREMENT"i -> autoincrement
+not_null: ("NOT"i "NULL"i) -> not_null
+comment: ("comment"i STRING)
+%import common.CNAME
+%import common.STRING
+%import common.WS
+%ignore WS
+TYPE: "INT"i | "TINYINT"i | "SMALLINT"i | "MEDIUMINT"i | "BIGINT"i | "FLOAT"i | "DOUBLE"i | "DECIMAL"i | "CHAR"i | "VARCHAR"i | "TEXT"i | "DATE"i | "TIME"i | "DATETIME"i | "TIMESTAMP"i | "BOOLEAN"i | "ENUM"i | "BINARY"i | "VARBINARY"i | "BLOB"i | "JSON"i | "GEOMETRY"i
+STRING: /"([^"]*)"/
